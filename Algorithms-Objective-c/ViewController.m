@@ -19,6 +19,64 @@
     NSArray *testArray = @[@1, @2, @3, @4];
     NSLog(@"%ld", (long)[self binarySearchNoRecursionWithSource:testArray des:@3]);
     NSLog(@"%ld", (long)[self binarySearchRecursionWithSource:testArray des:@1]);
+    
+    NSMutableArray *bubbleArray = [@[@3, @1] mutableCopy];
+    [self bubbleSortWithArray:bubbleArray];
+    NSLog(@"%@", bubbleArray);
+    
+    NSMutableArray *quickArray = [@[@3, @2, @0, @90, @3, @35, @11, @5, @55] mutableCopy];
+    [self quickSortWithArray:quickArray left:0 right:(quickArray.count - 1)];
+    NSLog(@"%@", quickArray);
+}
+
+/*
+ * 快速排序
+ *
+ */
+- (void)quickSortWithArray:(NSMutableArray<NSNumber *> *)array left:(NSInteger)left right:(NSInteger)right {
+    if (left >= right) {
+        return;
+    }
+    
+    NSInteger i = left;
+    NSInteger j = right;
+    NSInteger key = array[left].integerValue;
+    
+    while (i != j) {
+        while (array[j].integerValue >= key && i < j) {
+            j--;
+        }
+        while (array[i].integerValue <= key && i < j) {
+            i++;
+        }
+        
+        if (i < j) {
+            NSNumber *temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    
+    array[left] = array[i];
+    array[i] = [NSNumber numberWithInteger:key];
+    [self quickSortWithArray:array left:left right:i - 1];
+    [self quickSortWithArray:array left:i + 1 right:right];
+}
+
+/*
+ * 冒泡排序
+ *
+ */
+- (void)bubbleSortWithArray:(NSMutableArray<NSNumber *> *)array {
+    for (int i = 0; i < array.count - 1; i++) {
+        for (int j = 0; j < array.count - 1 - i; j++) {
+            if (array[j] < array[j + 1]) {
+                NSNumber *temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
 }
 
 
