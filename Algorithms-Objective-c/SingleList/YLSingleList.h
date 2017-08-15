@@ -13,5 +13,19 @@
 @interface YLSingleList : NSObject
 
 - (instancetype)initList;
+// 尾插法
+- (void)appendToTail:(id)value;
+// 头插法
+- (void)appendToHead:(id)value;
+// 返回给定位置的节点
+- (YLSingleListNode *)searchListNodeInIndex:(NSInteger)index;
+// 向指定的位置插入节点
+- (BOOL)insertListNodeWithValue:(id)value index:(NSInteger)index;
+// 删除指定位置节点
+- (BOOL)deleteListNodeInIndex:(NSInteger)index;
+// 修改指定位置的节点值
+- (BOOL)changeListNodeWithValue:(id)value index:(NSInteger)index;
+// 输出链表
+- (void)outputListNode;
 
 @end

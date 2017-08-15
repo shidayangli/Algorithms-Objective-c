@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YLSingleList.h"
 
 @interface ViewController ()
 
@@ -27,6 +28,23 @@
     NSMutableArray *quickArray = [@[@3, @2, @0, @90, @3, @35, @11, @5, @55] mutableCopy];
     [self quickSortWithArray:quickArray left:0 right:(quickArray.count - 1)];
     NSLog(@"%@", quickArray);
+    
+    NSLog(@"================================");
+    YLSingleList *list = [[YLSingleList alloc] initList];
+    [list appendToTail:@2];
+    [list appendToTail:@24];
+    [list appendToTail:@7];
+    [list appendToTail:@4];
+    [list outputListNode];
+    NSLog(@"================================");
+    [list insertListNodeWithValue:@11 index:2];
+    [list outputListNode];
+    NSLog(@"================================");
+    [list deleteListNodeInIndex:0];
+    [list outputListNode];
+    NSLog(@"================================");
+    [list changeListNodeWithValue:@13 index:1];
+    [list outputListNode];
 }
 
 /*

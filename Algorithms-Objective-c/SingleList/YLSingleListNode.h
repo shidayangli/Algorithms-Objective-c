@@ -13,4 +13,6 @@
 @property (nonatomic, strong) id value;
 @property (nonatomic, strong) YLSingleListNode *next;
 
+- (instancetype)initWithValue:(id)value;
+
 @end

@@ -10,4 +10,13 @@
 
 @implementation YLSingleListNode
 
+- (instancetype)initWithValue:(id)value {
+    self = [super init];
+    if (self) {
+        _value = value;
+        _next = nil;
+    }
+    return self;
+}
+
 @end
