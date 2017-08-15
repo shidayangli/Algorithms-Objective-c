@@ -15,6 +15,8 @@
 		8F7F29001F41A78D00CFD027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7F28FE1F41A78D00CFD027 /* LaunchScreen.storyboard */; };
 		8F7F290B1F41A78D00CFD027 /* Algorithms_Objective_cTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F290A1F41A78D00CFD027 /* Algorithms_Objective_cTests.m */; };
 		8F7F29161F41A78D00CFD027 /* Algorithms_Objective_cUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F29151F41A78D00CFD027 /* Algorithms_Objective_cUITests.m */; };
+		8F94968C1F4200E800BE53F7 /* YLSingleListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F94968B1F4200E800BE53F7 /* YLSingleListNode.m */; };
+		8F94968F1F4200F600BE53F7 /* YLSingleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F94968E1F4200F600BE53F7 /* YLSingleList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		8F7F29111F41A78D00CFD027 /* Algorithms-Objective-cUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Algorithms-Objective-cUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7F29151F41A78D00CFD027 /* Algorithms_Objective_cUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorithms_Objective_cUITests.m; sourceTree = "<group>"; };
 		8F7F29171F41A78D00CFD027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F94968A1F4200E800BE53F7 /* YLSingleListNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSingleListNode.h; sourceTree = "<group>"; };
+		8F94968B1F4200E800BE53F7 /* YLSingleListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSingleListNode.m; sourceTree = "<group>"; };
+		8F94968D1F4200F600BE53F7 /* YLSingleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLSingleList.h; sourceTree = "<group>"; };
+		8F94968E1F4200F600BE53F7 /* YLSingleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLSingleList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		8F7F28EF1F41A78D00CFD027 /* Algorithms-Objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				8F9496891F4200E800BE53F7 /* SingleList */,
 				8F7F28F31F41A78D00CFD027 /* AppDelegate.h */,
 				8F7F28F41F41A78D00CFD027 /* AppDelegate.m */,
 				8F7F28F61F41A78D00CFD027 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				8F7F29171F41A78D00CFD027 /* Info.plist */,
 			);
 			path = "Algorithms-Objective-cUITests";
+			sourceTree = "<group>";
+		};
+		8F9496891F4200E800BE53F7 /* SingleList */ = {
+			isa = PBXGroup;
+			children = (
+				8F94968A1F4200E800BE53F7 /* YLSingleListNode.h */,
+				8F94968B1F4200E800BE53F7 /* YLSingleListNode.m */,
+				8F94968D1F4200F600BE53F7 /* YLSingleList.h */,
+				8F94968E1F4200F600BE53F7 /* YLSingleList.m */,
+			);
+			path = SingleList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +296,9 @@
 			files = (
 				8F7F28F81F41A78D00CFD027 /* ViewController.m in Sources */,
 				8F7F28F51F41A78D00CFD027 /* AppDelegate.m in Sources */,
+				8F94968C1F4200E800BE53F7 /* YLSingleListNode.m in Sources */,
 				8F7F28F21F41A78D00CFD027 /* main.m in Sources */,
+				8F94968F1F4200F600BE53F7 /* YLSingleList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +538,7 @@
 				8F7F291C1F41A78D00CFD027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F7F291D1F41A78D00CFD027 /* Build configuration list for PBXNativeTarget "Algorithms-Objective-cTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +547,7 @@
 				8F7F291F1F41A78D00CFD027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F7F29201F41A78D00CFD027 /* Build configuration list for PBXNativeTarget "Algorithms-Objective-cUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +556,7 @@
 				8F7F29221F41A78D00CFD027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
