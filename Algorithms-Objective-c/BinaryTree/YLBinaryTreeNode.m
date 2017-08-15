@@ -64,14 +64,9 @@
     if (!rootNode) {
         return nil;
     }
-    if (!rootNode.leftNode && !rootNode.rightNode) {
-        return rootNode;
-    }
-    [self invertBinaryTree:rootNode.leftNode];
-    [self invertBinaryTree:rootNode.rightNode];
-    BinaryTreeNode *tempNode = rootNode.leftNode;
-    rootNode.leftNode = rootNode.rightNode;
-    rootNode.rightNode = tempNode;
+    BinaryTreeNode *temp = rootNode.leftNode;
+    rootNode.leftNode = [BinaryTreeNode invertBinaryTree:rootNode.rightNode];
+    rootNode.rightNode = [BinaryTreeNode invertBinaryTree:temp];
     return rootNode;
 }
 

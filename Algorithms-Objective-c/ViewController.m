@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YLSingleList.h"
+#import "YLBinaryTreeNode.h"
 
 @interface ViewController ()
 
@@ -50,6 +51,14 @@
     NSLog(@"================================");
     [list reverseList];
     [list outputListNode];
+    NSLog(@"================================");
+    NSArray *binaryTreeArray = @[@8, @4, @6, @3, @17, @15, @19];
+    BinaryTreeNode *binaryTreeNode = [BinaryTreeNode createTreeWithValues:binaryTreeArray];
+    [BinaryTreeNode invertBinaryTree:binaryTreeNode];
+    NSLog(@"-----------%ld %ld", binaryTreeNode.leftNode.value, binaryTreeNode.rightNode.value);
+    [BinaryTreeNode levelTraverseTree:binaryTreeNode handler:^(BinaryTreeNode *treeNode) {
+        NSLog(@"%ld", (long)treeNode.value);
+    }];
 }
 
 /*
