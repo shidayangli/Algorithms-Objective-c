@@ -33,6 +33,8 @@
     YLSingleList *list = [[YLSingleList alloc] initList];
     [list appendToTail:@2];
     [list appendToTail:@24];
+    [list appendToTail:@20];
+    [list appendToTail:@3];
     [list appendToTail:@7];
     [list appendToTail:@4];
     [list outputListNode];
@@ -44,6 +46,9 @@
     [list outputListNode];
     NSLog(@"================================");
     [list changeListNodeWithValue:@13 index:1];
+    [list outputListNode];
+    NSLog(@"================================");
+    [list reverseList];
     [list outputListNode];
 }
 

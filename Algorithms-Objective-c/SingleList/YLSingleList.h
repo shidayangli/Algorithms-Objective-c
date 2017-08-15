@@ -27,5 +27,7 @@
 - (BOOL)changeListNodeWithValue:(id)value index:(NSInteger)index;
 // 输出链表
 - (void)outputListNode;
+// 翻转链表
+- (void)reverseList;
 
 @end

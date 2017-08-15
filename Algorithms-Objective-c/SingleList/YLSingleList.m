@@ -127,4 +127,19 @@
     }
 }
 
+- (void)reverseList {
+    YLSingleListNode *p = self.head;
+    YLSingleListNode *s = p.next;
+    while (s.next) {
+        YLSingleListNode *t = s.next;
+        s.next = p;
+        p = s;
+        s = t;
+    }
+    s.next = p;
+    self.head.next = nil;
+    self.tail = self.head;
+    self.head = s;
+}
+
 @end
