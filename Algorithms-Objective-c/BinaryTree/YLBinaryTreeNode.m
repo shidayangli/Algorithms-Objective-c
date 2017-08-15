@@ -217,6 +217,41 @@
 }
 
 /**
+ *  分层遍历
+ *
+ *  @param rootNode 二叉树根节点
+ *  @param handler  访问节点处理函数
+ */
++ (void)oneLevelTraverseTree:(BinaryTreeNode *)rootNode handler:(void(^)(NSArray<BinaryTreeNode *> * nodeArray))handler {
+    if (!rootNode) {
+        return;
+    }
+    NSMutableArray *temp = [NSMutableArray array];    //每层的临时队列
+    NSInteger inCount = 1;
+    NSInteger outCount = 0;
+    NSMutableArray *queueArray = [NSMutableArray array]; //数组当成队列
+    [queueArray addObject:rootNode]; //压入根节点
+    while (queueArray.count > 0) {
+        BinaryTreeNode *node = [queueArray firstObject];
+        outCount++;
+        [temp addObject:node];
+        [queueArray removeObjectAtIndex:0]; //弹出最前面的节点，仿照队列先进先 出原则
+        if (node.leftNode) {
+            [queueArray addObject:node.leftNode]; //压入左节点
+        }
+        if (node.rightNode) {
+            [queueArray addObject:node.rightNode]; //压入右节点
+        }
+        if (outCount == inCount) {
+            handler([temp copy]);
+            [temp removeAllObjects];
+            outCount = 0;
+            inCount = queueArray.count;
+        }
+    }
+}
+
+/**
  *  二叉树的深度
  *
  *  @param rootNode 二叉树根节点

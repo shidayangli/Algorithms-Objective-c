@@ -30,6 +30,8 @@
 + (void)postOrderTraverseTree:(BinaryTreeNode *)rootNode handler:(void(^)(BinaryTreeNode *treeNode))handler;
 //层次遍历（广度优先)
 + (void)levelTraverseTree:(BinaryTreeNode *)rootNode handler:(void(^)(BinaryTreeNode *treeNode))handler;
+//层次遍历
++ (void)oneLevelTraverseTree:(BinaryTreeNode *)rootNode handler:(void(^)(NSArray<BinaryTreeNode *> * nodeArray))handler;
 //二叉树的宽度
 + (NSInteger)widthOfTree:(BinaryTreeNode *)rootNode;
 //二叉树的所有节点数
