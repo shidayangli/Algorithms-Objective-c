@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0BCC821F42D2BE004344A9 /* YLBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0BCC811F42D2BE004344A9 /* YLBinaryTreeNode.m */; };
 		8F7F28F21F41A78D00CFD027 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F28F11F41A78D00CFD027 /* main.m */; };
 		8F7F28F51F41A78D00CFD027 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F28F41F41A78D00CFD027 /* AppDelegate.m */; };
 		8F7F28F81F41A78D00CFD027 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7F28F71F41A78D00CFD027 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F0BCC801F42D2BE004344A9 /* YLBinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBinaryTreeNode.h; sourceTree = "<group>"; };
+		8F0BCC811F42D2BE004344A9 /* YLBinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBinaryTreeNode.m; sourceTree = "<group>"; };
 		8F7F28ED1F41A78D00CFD027 /* Algorithms-Objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Algorithms-Objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7F28F11F41A78D00CFD027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F7F28F31F41A78D00CFD027 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F0BCC7F1F42D2A5004344A9 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				8F0BCC801F42D2BE004344A9 /* YLBinaryTreeNode.h */,
+				8F0BCC811F42D2BE004344A9 /* YLBinaryTreeNode.m */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
 		8F7F28E41F41A78D00CFD027 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 		8F7F28EF1F41A78D00CFD027 /* Algorithms-Objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				8F0BCC7F1F42D2A5004344A9 /* BinaryTree */,
 				8F9496891F4200E800BE53F7 /* SingleList */,
 				8F7F28F31F41A78D00CFD027 /* AppDelegate.h */,
 				8F7F28F41F41A78D00CFD027 /* AppDelegate.m */,
@@ -299,6 +312,7 @@
 				8F94968C1F4200E800BE53F7 /* YLSingleListNode.m in Sources */,
 				8F7F28F21F41A78D00CFD027 /* main.m in Sources */,
 				8F94968F1F4200F600BE53F7 /* YLSingleList.m in Sources */,
+				8F0BCC821F42D2BE004344A9 /* YLBinaryTreeNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
